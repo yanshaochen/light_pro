@@ -12,9 +12,6 @@
         http://www.springframework.org/schema/tx  http://www.springframework.org/schema/tx/spring-tx.xsd
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
 ">
-    <!-- 01.包扫描器和注解驱动 -->
-    <context:component-scan base-package="com.giit"/>
-    <mvc:annotation-driven/>
     <!-- 02.识别jdbc.properties文件 -->
     <context:property-placeholder location="classpath:jdbc.properties"/>
     <!-- 03.alibaba数据源 -->
@@ -39,17 +36,4 @@
     </bean>
     <!-- 05.扫描整个Dao层，注入Mapper-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer" p:basePackage="com.giit.dao"/>
-    <!-- 06.transactionManager -->
-    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" p:dataSource-ref="dataSource"/>
-    <!-- 07.AspectJ AOP 配置事务 -->
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <!--事务的隔离级别和传播行为在这里设置-->
-            <tx:method name="addBook" isolation="DEFAULT" propagation="REQUIRED"/>
-        </tx:attributes>
-    </tx:advice>
-    <aop:config>
-        <aop:pointcut id="pointcut" expression="execution(* *..impl.*.*(..))"/>
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
-    </aop:config>
 </beans>
