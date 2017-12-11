@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="SSM_shiro_easyui:war">
-    <output-path>$PROJECT_DIR$/SSM_shiro_easyui/target</output-path>
-    <root id="archive" name="light_pro.war">
-      <element id="artifact" artifact-name="SSM_shiro_easyui:war exploded" />
-    </root>
-  </artifact>
-</component>

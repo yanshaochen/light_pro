@@ -42,14 +42,14 @@
     <!-- 06.transactionManager -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager" p:dataSource-ref="dataSource"/>
     <!-- 07.AspectJ AOP 配置事务 -->
-    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+    <!--<tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
-            <!--事务的隔离级别和传播行为在这里设置-->
+            &lt;!&ndash;事务的隔离级别和传播行为在这里设置&ndash;&gt;
             <tx:method name="addBook" isolation="DEFAULT" propagation="REQUIRED"/>
         </tx:attributes>
     </tx:advice>
     <aop:config>
         <aop:pointcut id="pointcut" expression="execution(* *..impl.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="pointcut"/>
-    </aop:config>
+    </aop:config>-->
 </beans>

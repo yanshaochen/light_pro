@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SSM_security_easyui" />
         <module name="SSM_shiro_easyui" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="light_pro" target="1.5" />
+      <module name="SSM_security_easyui" target="1.5" />
       <module name="SSM_shiro_easyui" target="1.5" />
     </bytecodeTargetLevel>
   </component>

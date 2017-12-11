@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SSM_shiro_easyui/SSM_shiro_easyui.iml" filepath="$PROJECT_DIR$/SSM_shiro_easyui/SSM_shiro_easyui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SSM_security_easyui/SSM_security_easyui.iml" filepath="$PROJECT_DIR$/SSM_security_easyui/SSM_security_easyui.iml" />
       <module fileurl="file://$PROJECT_DIR$/light_pro.iml" filepath="$PROJECT_DIR$/light_pro.iml" />
     </modules>
   </component>
